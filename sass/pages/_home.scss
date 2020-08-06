@@ -1,0 +1,32 @@
+.header {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-rows: min-content minmax(min-content, 1fr);
+    grid-gap: 2rem;
+    grid-template-columns: repeat(8,  minmax(min-content,1fr));
+}
+
+.benefit {
+    background-color: violet;
+    grid-column: center-start / center-end;
+}
+
+.explanation {
+    background-color: burlywood;
+    grid-column: center-start / center-end;
+}
+
+.price {
+    background-color: hotpink;
+    grid-column: center-start / center-end;
+}
+
+.review {
+    background-color: thistle;
+    grid-column: center-start / center-end;
+}
+
+.footer {
+    background-color: lightcoral;
+    grid-column: center-start / center-end;
+}

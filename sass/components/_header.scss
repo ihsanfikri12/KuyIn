@@ -1,0 +1,145 @@
+.header {
+    &__menu {
+        height: 10rem;
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr repeat(2,max-content);
+        grid-gap: 3rem;
+        align-items: center;
+        
+    }
+
+    &__text {
+        grid-column: 1 / 2;
+        font-size: 2.3rem;
+        font-weight: 700;
+        color: $color-primary;
+    }
+
+    &__sign {
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        font-weight: 400;
+        cursor: pointer;
+
+        &--in {
+            grid-column: 2 / 3;
+            transition: all .3s;
+            border-bottom: 1px solid transparent;
+
+            &:hover{
+                color: $color-primary;
+                border-bottom: 1px solid $color-primary;
+            }
+
+            &:active {
+                transform: scale(.97);
+                
+            }
+        }
+
+        &--out {
+            grid-column: 3 / 4;
+            background-color: $color-primary;
+            color: $color-text;
+            padding: 1rem;
+            border-radius: 1rem;
+            backface-visibility: hidden;
+            transition: transform .3s;
+
+            &:hover{
+                transform: scale(1.11);
+            }
+
+            &:active {
+                transform: scale(1.09);
+            }
+        }
+    }
+
+    &__travel {
+        grid-column: 1 / span 4;
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-rows: repeat(3, max-content);
+        align-content: center;
+        
+    }   
+
+    &__input {
+        width: 70%;
+        font-family: inherit;
+        border-radius: 1rem;
+        border: none;
+        background-color: $color-text-dark;
+        padding: 2rem;
+        transition: all .3s;
+        border-bottom: .5rem solid transparent;
+
+        &:focus {
+            outline: none;
+            width: 80%;
+            border-bottom: .5rem solid $color-primary;
+        }
+    }
+
+    &__button {
+        justify-self: start;
+        width: 30%;
+        border: none;
+        border-radius: 3rem;
+        padding: 1rem;
+        color: $color-text;
+        background-color: $color-primary;
+        transition: all .4s;
+        cursor: pointer;
+
+        &:hover, &:active {
+            background-color: $color-primary-dark;
+        }
+    }
+
+    &__photo {
+        grid-column: 5 / span 4;
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-rows: repeat(7, 5vw);
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        &--1 {
+            grid-row: 1 / span 4;
+            grid-column: 1 / span 3;
+            transition: all .3s;
+
+        }
+
+        &--2 {
+            grid-row: 1 / span 3;
+            grid-column: 4 / span 5;
+            transition: all .3s;
+
+        }
+
+        &--3 {
+            grid-row: 4 / span 3;
+            grid-column: 7 / span 2;
+            transition: all .3s;
+
+        }
+
+        &--4 {
+            grid-row: 4 / span 2;
+            grid-column: 4 / span 3;
+            transition: all .3s;
+        }
+    }
+    
+
+    
+}
